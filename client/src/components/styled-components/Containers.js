@@ -11,10 +11,13 @@ justify-content: center;
 align-items: center;
 flex: 1 0 auto;
 text-align: center;
+
+@media only screen and (min-width: 1024px) {
+    margin-left: 12vw;
+}
 `
 
 export const SplashContainer = Container.extend`
-min-height: 80vh;
 flex-direction: column;
 justify-content: center;
 background: url(${SplashImg}) center no-repeat;
@@ -26,7 +29,7 @@ background-size: cover;
 `
 
 export const HomePageText = styled.div`
-margin-top: 10px;
+margin-top: .1vh;
 color: whitesmoke;
 `
 

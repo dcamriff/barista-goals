@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import logo from './logo.svg'
 import './App.css'
+import axios from 'axios'
+
 import HomePage from './components/HomePage'
 
 class App extends Component {
@@ -26,7 +28,7 @@ class App extends Component {
         <div></div>
           <Switch>
           <Route exact path="/" component={HomeComponent} />
-          {/* <Route exact path="/products" component={CategoryListComponent} /> */}
+          {/* <Route exact path="/categories" component={CategoryListComponent} /> */}
           {/* <Route exact path="/order/:id" component={FieldNotesListComponent} /> */}
           </Switch>
         </div>
