@@ -4,6 +4,7 @@ import logo from './logo.svg'
 import './App.css'
 import axios from 'axios'
 
+import Navbar from './components/Navbar'
 import HomePage from './components/HomePage'
 import LoginForm from './components/LoginForm'
 import CategoriesList from './components/CategoriesList'
@@ -48,7 +49,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-        <div></div>
+        <Navbar isLoggedIn = {this.state.isLoggedIn}/>
           <Switch>
           <Route exact path="/" component={HomeComponent} />
           <Route exact path="/categories" component={CategoryListComponent} />

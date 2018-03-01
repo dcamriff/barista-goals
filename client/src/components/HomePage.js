@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Navbar from './Navbar'
 import { SplashContainer, HomePageText, LoginContainer } from './styled-components/Containers'
 
 class HomePage extends Component {
@@ -28,7 +27,6 @@ class HomePage extends Component {
     render () {
         return (
             <div>
-                <Navbar />
                 <SplashContainer>
                     <div>
                     <HomePageText></HomePageText>
