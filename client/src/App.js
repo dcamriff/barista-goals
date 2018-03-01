@@ -5,6 +5,7 @@ import './App.css'
 import axios from 'axios'
 
 import HomePage from './components/HomePage'
+import LoginForm from './components/LoginForm'
 import CategoriesList from './components/CategoriesList'
 
 class App extends Component {

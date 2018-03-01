@@ -1,44 +1,47 @@
 import styled from 'styled-components'
 
-
-export const Nav = styled.div`
-    width: 100vw;
-    position: fixed;        
-    color: rgb(0, 0, 0);
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 7vh;
-    margin-bottom: 25px;
-    background-color: linear-gradient(to right, rgb(0, 204, 255) , rgb(250,215,215));
-    a{
-        text-decoration: none;
-        color: white;
-        margin: 10px;
-        margin-right: 20px;
-        font-size: 1.25em;
-        text-shadow: 1px 1px rgba(0,0,0, 0.1);
-        @media only screen and (max-width: 787px){
-            font-size: 1em
-        
-        }
-    
-        @media only screen and (max-width: 600px){
-            font-size: .75em
-        
-        }
-    
-    }
-`
-export const NavItems = styled.div`
-    margin-right: 25px;
-    a {
-        margin: 10px;
-    }
+export const NavContainer = styled.div`
+background-color: #131919;
+/* border: solid 1px green; */
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 3px;
+height: 100px;
+width: 100vw;
+position: fixed;
 `
 
-export default {
-    Nav, NavItems
+export const LogoContainer = styled.div`
+margin: 30px;
+
+img {
+    height: 60px;
 }
+
+:hover {
+    transform: scale(1.1);
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+`
+export const NavCenterTextContainer = styled.div`
+color: whitesmoke;
+`
+
+export const LinksContainer = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+a {
+    text-decoration: none;
+    padding: 0 15px;
+    color: white;
+}
+img {
+    height: 55px;
+    margin-right: 20px;
+}
+`
+
+// Logo: espresso by Ben Didier from the Noun Project
