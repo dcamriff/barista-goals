@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 import SplashImg from './img/splash.jpg'
@@ -17,6 +16,11 @@ text-align: center;
 }
 `
 
+export const PhotoHeaderContainer = styled.div`
+    position: absolute;
+    z-index: +1;   
+`
+
 export const SplashContainer = Container.extend`
 flex-direction: column;
 justify-content: center;
@@ -25,6 +29,18 @@ background-size: cover;
 
 @media (min-width: 1025px) {
     width: 75vw;
+}
+`
+export const PhotoCenteringContainer = styled.div`
+    display:flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const CatHeaderContainer = PhotoHeaderContainer.extend`
+a {
+    text-decoration: none;
+    color: white;
 }
 `
 
@@ -77,4 +93,25 @@ width: 80vw;
 margin-top: 75px;
 justify-content: center;
 align-items: center;
+`
+
+export const CategoriesListContainer = styled.div `
+    display: flex;
+    flex-wrap: wrap;
+
+`
+export const CategoryContainer = PhotoCenteringContainer.extend`
+    font-size: 4.75em;
+    color: white;
+    border: solid 1px white;
+    text-shadow: 1px 1px rgba(0,0,0, 0.50);   
+    @media only screen and (max-width: 787px){
+        font-size: 3em
+    
+    }
+
+    @media only screen and (max-width: 600px){
+        font-size: 2.5em
+    
+    }
 `

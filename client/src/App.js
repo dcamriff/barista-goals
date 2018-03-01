@@ -5,10 +5,12 @@ import './App.css'
 import axios from 'axios'
 
 import HomePage from './components/HomePage'
+import CategoriesList from './components/CategoriesList'
 
 class App extends Component {
   state = {
-    isLoggedIn: false
+    isLoggedIn: false,
+    categories: []
   }
 
   isLoggedIn = () => {
@@ -18,9 +20,27 @@ class App extends Component {
     {this.setState({isLoggedIn: false})
     }
   }
+  componentWillMount(){
+    this.fetchCategories()
+    // this.fetchFieldNotes()
+  }
+
+  fetchCategories = async () => {
+    try {
+      const res = await axios.get('/api/categories')
+        await this.setState({categories: res.data})
+        return res.data
+      }
+      catch (err) {
+        console.log(err)
+        await this.setState({error: err.message})
+        return err.message
+      }
+  }
 
   render() {
     const HomeComponent = () => (<HomePage />)
+    const CategoryListComponent = () => (<CategoriesList categories={this.state.categories}/>)
 
     return (
       <Router>
@@ -28,7 +48,7 @@ class App extends Component {
         <div></div>
           <Switch>
           <Route exact path="/" component={HomeComponent} />
-          {/* <Route exact path="/categories" component={CategoryListComponent} /> */}
+          <Route exact path="/categories" component={CategoryListComponent} />
           {/* <Route exact path="/order/:id" component={FieldNotesListComponent} /> */}
           </Switch>
         </div>

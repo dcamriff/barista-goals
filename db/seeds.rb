@@ -40,7 +40,7 @@ espresso = Category.create!(
     name: "espresso-based",
     cat_type: "drink",
     description: "Consists of any drinks that are espresso-based. This a a good place to detail espresso shot params, milk-to-espresso ratios, and latte art techniques.",
-    image: "https://i.imgur.com/Q65ZQMo.png",
+    image: "https://i.imgur.com/Evpzn9u.png",
     active: true
 )
 
@@ -55,7 +55,7 @@ tea = Category.create!(
     name: "tea",
     cat_type: "drink",
     description: "Tea has it's own complexities and brew methods. Keep good steeping and tasting notes to build your palette.",
-    image: "https://i.imgur.com/20V8M2e.png",
+    image: "https://i.imgur.com/hYFE9gf.jpg",
     active: true
 )
 
