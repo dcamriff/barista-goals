@@ -55,29 +55,7 @@ margin-top: 350px;
 `
 // Credit: SplashImg Photo by Nathan Dumlao on Unsplash
 
-// PRODUCTS
 
-export const ProductsContainer = styled.div`
-width: 80vw;
-margin-top: 75px;
-justify-content: center;
-align-items: center;
-`
-
-export const SingleProductContainer = styled.div`
-display: flex;
-
-justify-content: space-between;
-
-img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: solid #774222 1px;
-    margin: 5px;
-
-}
-`
 export const ItemName = styled.p`
 font-weight: bold;
 `
@@ -121,11 +99,11 @@ export const PageHeader = styled.div`
 display: flex;
 justify-content: space-around;
 padding-top: 100px;
+border-bottom: solid 2px #774222;
 h1 {
 }
 `
 export const CategoryShowOneContainer = styled.div`
-background-color: lightgoldenrodyellow;
 display: flex;
 justify-content: flex-start;
 @media (max-width: 414px){
@@ -134,7 +112,7 @@ justify-content: flex-start;
 
 `
 export const CategoryImageContainer = styled.div`
-width: 50vw;
+/* width: 50vw; */
 
 img {
     width:50vw;
@@ -144,17 +122,30 @@ img {
 }
 `
 export const CategoryInfoContainer = styled.div`
-padding: 4px;
+a {
+    text-decoration: none;
+    color: #774222;
+    :hover {
+    transform: scale(1.1);
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+}
+
+p {
+    padding: 4px;
+}
+
 span {
     font-style: italic;
 }`
 
 export const SideNote = styled.div`
-margin-top: 20px;
+margin-top: 10px;
 font-size: .8em;
 `
 export const FieldNoteSingleContainer = styled.div`
-background-color: lightgray;
+margin: 15px;
 img {
     width: 100px;
     border-radius: 50%;
@@ -165,6 +156,7 @@ export const FieldNotesContainer = styled.div`
 background-color: lightgoldenrodyellow;
 display: flex;
 justify-content: flex-start;
+margin: 15px;
 @media (max-width: 414px){
         flex-wrap: wrap;
     }
