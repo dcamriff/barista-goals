@@ -10,10 +10,11 @@ import LoginForm from './components/LoginForm'
 import CategoriesList from './components/CategoriesList'
 import CategoryShow from'./components/CategoryShow'
 
+
 class App extends Component {
   state = {
     isLoggedIn: false,
-    categories: []
+    categories: [],
   }
 
   isLoggedIn = () => {
@@ -25,7 +26,6 @@ class App extends Component {
   }
   componentWillMount(){
     this.fetchCategories()
-    // this.fetchFieldNotes()
   }
 
   fetchCategories = async () => {
@@ -40,11 +40,13 @@ class App extends Component {
         return err.message
       }
   }
+  
 
   render() {
     const HomeComponent = () => (<HomePage />)
-    const CategoryListComponent = () => (<CategoriesList categories={this.state.categories}/>)
-    const CategoryShowComponent = (props) => (<CategoryShow city={this.state.category} {...props} isLoggedIn = {this.state.isLoggedIn}  />)
+    const CategoryListComponent = () => (<CategoriesList categories={this.state.categories} />)
+    const CategoryShowComponent = (props) => (<CategoryShow category={this.state.category} {...props} isLoggedIn = {this.state.isLoggedIn} />)
+    // const FieldNotesListComponent = () => (<FieldNotesList field_notes={this.state.field_notes} />)
 
     return (
       <Router>
@@ -54,6 +56,7 @@ class App extends Component {
           <Route exact path="/" component={HomeComponent} />
           <Route exact path="/categories" component={CategoryListComponent} />
           <Route exact path="/categories/:id" component={CategoryShowComponent} />
+          {/* <Route exact path="/categories/:id/field_notes" component={FieldNotesListComponent} /> */}
           </Switch>
         </div>
       </Router>
