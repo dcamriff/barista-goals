@@ -7,6 +7,7 @@ import axios from 'axios'
 import HomePage from './components/HomePage'
 import LoginForm from './components/LoginForm'
 import CategoriesList from './components/CategoriesList'
+import CategoryShow from'./components/CategoryShow'
 
 class App extends Component {
   state = {
@@ -42,6 +43,7 @@ class App extends Component {
   render() {
     const HomeComponent = () => (<HomePage />)
     const CategoryListComponent = () => (<CategoriesList categories={this.state.categories}/>)
+    const CategoryShowComponent = (props) => (<CategoryShow city={this.state.category} {...props} isLoggedIn = {this.state.isLoggedIn}  />)
 
     return (
       <Router>
@@ -50,7 +52,7 @@ class App extends Component {
           <Switch>
           <Route exact path="/" component={HomeComponent} />
           <Route exact path="/categories" component={CategoryListComponent} />
-          {/* <Route exact path="/order/:id" component={FieldNotesListComponent} /> */}
+          <Route exact path="/categories/:id" component={CategoryShowComponent} />
           </Switch>
         </div>
       </Router>
