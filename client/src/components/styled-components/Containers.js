@@ -98,6 +98,7 @@ align-items: center;
 export const CategoriesListContainer = styled.div `
     display: flex;
     flex-wrap: wrap;
+    padding-top: 100px;
 
 `
 export const CategoryContainer = PhotoCenteringContainer.extend`
@@ -114,4 +115,48 @@ export const CategoryContainer = PhotoCenteringContainer.extend`
         font-size: 2.5em
     
     }
+`
+
+export const PageHeader = styled.div`
+display: flex;
+justify-content: space-around;
+padding-top: 100px;
+h1 {
+}
+`
+export const CategoryShowOneContainer = styled.div`
+background-color: lightgoldenrodyellow;
+display: flex;
+justify-content: flex-start;
+@media (max-width: 414px){
+        flex-wrap: wrap;
+    }
+
+`
+export const CategoryImageContainer = styled.div`
+width: 50vw;
+
+img {
+    width:50vw;
+    @media (max-width: 414px){
+        width: 100vw;
+    }
+}
+`
+export const CategoryInfoContainer = styled.div`
+padding: 4px;
+span {
+    font-style: italic;
+}`
+
+export const SideNote = styled.div`
+margin-top: 20px;
+font-size: .8em;
+`
+export const FieldNoteSingleContainer = styled.div`
+background-color: lightgray;
+`
+
+export const FieldNotesContainer = styled.div`
+background-color: lightgoldenrodyellow;
 `

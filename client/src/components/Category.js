@@ -8,7 +8,8 @@ const Category = (props) => {
     return (
         <div>
             <div>
-                <CategoryImage src={props.image} alt={props.name}/>
+                <Link to={`/categories/${props.categoryId}`}><CategoryImage src={props.image} alt={props.name}/>
+                </Link>
                 <p>{props.name}</p>
                 {/* <p>{props.description}</p>
                 <p>{props.cat_type}</p> */}

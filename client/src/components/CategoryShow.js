@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import CategoriesList from './CategoriesList'
-import { FieldNoteSingleContainer, FieldNoteContainer } from './styled-components/Containers'
+import { PageHeader, CategoryShowOneContainer, CategoryImageContainer, CategoryInfoContainer, SideNote, FieldNoteSingleContainer, FieldNoteContainer } from './styled-components/Containers'
 
 class CategoryShow extends Component {
     state = {
@@ -22,14 +22,17 @@ class CategoryShow extends Component {
     render() {
         return (
             <div>
-                <div>Category Container
-                    <div>
+                <div><PageHeader><h1>Field Notes</h1></PageHeader></div>
+                <CategoryShowOneContainer>
+                    <CategoryImageContainer>
                         <img src={this.state.category.image} alt={this.state.category.title}/>
-                    </div>
-                    <div><h2>Cat Name</h2></div>
-                    <div><p>Cat Type</p></div>
-                    <div><p>Description</p></div>
-                </div>
+                    </CategoryImageContainer>
+                    <CategoryInfoContainer>
+                    <div><h2>{this.state.category.name}</h2></div>
+                    <div><p>{this.state.category.description}</p></div>
+                    <SideNote><p>Barista Goals <span>field notes</span> is a learning resource for passionate baristas. Share the knowledge!</p></SideNote>
+                    </CategoryInfoContainer>
+                </CategoryShowOneContainer>
                 
             </div>
         );
