@@ -27,6 +27,8 @@ img {
 `
 export const NavCenterTextContainer = styled.div`
 color: whitesmoke;
+font-size: 1.2em;
+
 `
 
 export const LinksContainer = styled.div`
