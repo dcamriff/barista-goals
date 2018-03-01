@@ -155,8 +155,17 @@ font-size: .8em;
 `
 export const FieldNoteSingleContainer = styled.div`
 background-color: lightgray;
+img {
+    width: 100px;
+    border-radius: 50%;
+}
 `
 
 export const FieldNotesContainer = styled.div`
 background-color: lightgoldenrodyellow;
+display: flex;
+justify-content: flex-start;
+@media (max-width: 414px){
+        flex-wrap: wrap;
+    }
 `
