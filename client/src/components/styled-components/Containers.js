@@ -51,9 +51,32 @@ color: whitesmoke;
 
 export const LoginContainer = styled.div`
 /* position: absolute; */
-margin-top: 350px;
+margin-top: 400px;
 `
 // Credit: SplashImg Photo by Nathan Dumlao on Unsplash
+
+export const LoginFormInput = styled.input`
+width: 250px;
+height: 30px;
+margin-top: 15px;
+border-top-left-radius: 7px;
+border-top-right-radius: 7px;
+`
+
+export const Button = styled.input`
+width: 10vw;
+text-decoration: none;
+background-color: whitesmoke;
+}
+`
+
+export const AddNewFormInput = styled.input`
+width: 250px;
+/* height: 25px; */
+margin-top: 2px;
+border-top-left-radius: 7px;
+border-top-right-radius: 7px;
+`
 
 export const CategoriesListContainer = styled.div `
     display: flex;
@@ -104,6 +127,8 @@ img {
 }
 `
 export const CategoryInfoContainer = styled.div`
+margin-left: 15px;
+margin-right: 15px;
 a {
     text-decoration: none;
     color: #774222;

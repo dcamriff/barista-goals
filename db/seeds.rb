@@ -39,7 +39,7 @@ ninti = User.create!(
 espresso = Category.create!(
     name: "espresso-based",
     cat_type: "drink",
-    description: "Consists of any drinks that are espresso-based. This a a good place to detail espresso shot params, milk-to-espresso ratios, and latte art techniques.",
+    description: "Consists of any drinks that are espresso-based. This a good place to detail espresso shot params, milk-to-espresso ratios, and latte art techniques.",
     image: "https://i.imgur.com/Evpzn9u.png",
     active: true
 )

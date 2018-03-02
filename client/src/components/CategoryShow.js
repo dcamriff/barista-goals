@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 import CategoriesList from './CategoriesList'
 import FieldNotesList from './FieldNotesList'
+import FieldNoteForm from './FieldNoteForm'
 import { PageHeader, CategoryShowOneContainer, CategoryImageContainer, CategoryInfoContainer, SideNote, FieldNoteSingleContainer, FieldNoteContainer } from './styled-components/Containers'
 
 class CategoryShow extends Component {
@@ -47,6 +48,7 @@ class CategoryShow extends Component {
                     <SideNote><p>Barista Goals <span>field notes</span> is a learning resource for passionate baristas. Share the knowledge!</p></SideNote>
                     <br/>
                     <Link to="/categories">back to all categories</Link>
+                    <FieldNoteForm />
                     </CategoryInfoContainer>
                 </CategoryShowOneContainer>
                 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { SplashContainer, HomePageText, LoginContainer } from './styled-components/Containers'
+import { SplashContainer, HomePageText, LoginContainer, LoginFormInput, Button } from './styled-components/Containers'
 
 class HomePage extends Component {
 
@@ -34,11 +34,12 @@ class HomePage extends Component {
                     
                     <LoginContainer>
                         <form action="">
-                            <input name="username" type="text"/>
-                            <input name="password" type="text"/>
+                            <LoginFormInput name="username" type="text" placeholder="username"/>
                             <br/>
-                            <button>Sign Up</button>
-                            <input type="submit" value="Log In"/>
+                            <LoginFormInput name="password" type="text" placeholder="password"/>
+                            <br/>
+                            <Button type="submit" value="Sign Up"/>
+                            <Button  type="submit" value="Log In" />
                         </form>
                     </LoginContainer>
                 </SplashContainer>
