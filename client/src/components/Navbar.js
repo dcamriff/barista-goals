@@ -12,9 +12,11 @@ const NavBar = (props) => {
                 <LogoContainer>
                     <Link to="/"><img src={TampLogo} alt="barista goals logo"/></Link>
                     </LogoContainer>
+                <NavCenterTextContainer>
                 <Link to="/categories">
-                <NavCenterTextContainer>Barista Goals</NavCenterTextContainer>
+                <div>Barista Goals</div>
                 </Link>
+                </NavCenterTextContainer>
                 <LinksContainer>
                 <Link to="/login"><img src={PersonIcon} alt="barista goals logo"/></Link>
                 {/* <span> / </span>

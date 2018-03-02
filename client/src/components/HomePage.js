@@ -38,8 +38,12 @@ class HomePage extends Component {
                             <br/>
                             <LoginFormInput name="password" type="text" placeholder="password"/>
                             <br/>
-                            <Button type="submit" value="Sign Up"/>
+                            <div>
                             <Button  type="submit" value="Log In" />
+                            </div>
+                            <div>
+                            <Button type="submit" value="Sign Up"/>
+                            </div>
                         </form>
                     </LoginContainer>
                 </SplashContainer>

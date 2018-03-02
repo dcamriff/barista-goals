@@ -64,7 +64,7 @@ border-top-right-radius: 7px;
 `
 
 export const Button = styled.input`
-width: 10vw;
+width: 75px;
 text-decoration: none;
 background-color: whitesmoke;
 }
@@ -79,9 +79,14 @@ border-top-right-radius: 7px;
 `
 
 export const CategoriesListContainer = styled.div `
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 100px;
+display: flex;
+flex-wrap: wrap;
+padding-top: 100px;
+img {
+    @media (max-width: 375px){
+        width: 100vw;
+    }
+}
 
 `
 export const CategoryContainer = PhotoCenteringContainer.extend`

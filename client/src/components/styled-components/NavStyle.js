@@ -27,7 +27,12 @@ img {
 `
 export const NavCenterTextContainer = styled.div`
 color: whitesmoke;
-font-size: 1.5em;
+font-size: 1.3em;
+a{
+text-decoration: none;
+color: whitesmoke;
+/* font-size: 1.5em; */
+}
 /* font-family: 'Fredoka One', cursive; */
 
 `
