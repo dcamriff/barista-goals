@@ -1,8 +1,10 @@
 class Api::FieldNotesController < ApplicationController
     def index
-        puts params
+        # puts params
         @field_notes = Category.find(params[:category_id]).field_notes.order(created_at: :desc)
+        # @field_notes = FieldNote.all
         render json: @field_notes
+
       end
     
       def create

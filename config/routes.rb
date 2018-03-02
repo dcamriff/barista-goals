@@ -7,5 +7,11 @@ Rails.application.routes.draw do
     resources :categories do 
       resources :field_notes
     end
+
+    resources :field_notes
+
+    # custom
+    # get '/field_notes', to: ''
   end
+
 end

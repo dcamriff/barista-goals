@@ -9,7 +9,8 @@ import { PageHeader, CategoryShowOneContainer, CategoryImageContainer, CategoryI
 class CategoryShow extends Component {
     state = {
         category: "",
-        field_notes: []
+        field_notes: [],
+
     }
 
     getCategoryInfo = () => {
@@ -19,7 +20,10 @@ class CategoryShow extends Component {
 
     getFieldNotes = () => {
         axios.get(`/api/categories/${this.props.match.params.id}/field_notes`)
-        .then((res) => {this.setState({field_notes: res.data})})
+        .then((res) => 
+        {console.log("Showing ", res.data)
+            this.setState({field_notes: res.data})})
+        
     }
 
     componentWillMount() {
@@ -28,7 +32,7 @@ class CategoryShow extends Component {
         // console.log(this.props)
     }
     render() {
-        console.log(this.state.field_notes)
+        console.log("HEEYYYY", this.state.category)
         return (
             <div>
                 <div><PageHeader><h1>Field Notes</h1></PageHeader></div>

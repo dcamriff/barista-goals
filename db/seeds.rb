@@ -110,8 +110,8 @@ books = Category.create!(
 fieldnote1 = FieldNote.create(
     user: diane,
     category: espresso,  
-    title: "mocha art",
-    memo: "This pour won me a local latte art competition.",
+    title: "mocha latte art",
+    memo: "I competed with this pour in a Thursday Night Throwdown latte art competition and it scored first place.",
     image: "https://i.imgur.com/CwJbBLM.jpg",
     year: 2018,
     tags: "#mocha #latte #chocolate #latteart #espresso"
@@ -120,8 +120,8 @@ fieldnote1 = FieldNote.create(
 fieldnote2 = FieldNote.create!(
     user: diane,
     category: espresso,
-    title: "cortado 101",
-    memo: "The cortado wasn't common in many ATL indie shops until the past couple of years. This drink took me a while to master to pour. It's 2oz of espresso to 2 oz of micro steamed milk.",
+    title: "cortado goals",
+    memo: "It took me about 2 months of solid full-time shifts, shadowing Fogleman, to get to my comfort level pouring into smaller gibraltars. We pour them at 2oz to 2oz ratios, using local Altanta Fresh milk.",
     image: "https://i.imgur.com/9uzEBTm.png",
     year: 2017,
     tags: "#cortado #latteart #espresso"
@@ -129,8 +129,8 @@ fieldnote2 = FieldNote.create!(
 fieldnote3 = FieldNote.create!(
     user: diane,
     category: espresso,  
-    title: "this milk steaming pitcher da bomb!",
-    memo: "Love using the 12oz milk steaming pitcher by Espresso Parts. It gives good control of my free hand pouring.",
+    title: "favorite steaming pitcher",
+    memo: "The weight of this 12oz milk steaming pitcher by Espresso Parts gives good control of my pours.",
     image: "https://i.imgur.com/ttOWsW4.jpg",
     year: 2018,
     tags: "#latteart #espressoparts #pitcher"
@@ -140,7 +140,7 @@ fieldnote4 = FieldNote.create(
     user: ninti,
     category: manualbrew,  
     title: "love my chemex",
-    memo: "I've been testing out a natural process coffee from Ethopia as my morning brew lately.",
+    memo: "I've been testing out a natural process coffee from Ethopia as my morning brew lately. My preference has been a 1:17 ratio with an initial bloom of 45 seconds.",
     image: "https://i.imgur.com/ZTWpRCn.jpg",
     year: 2018,
     tags: "#chemex #ethopiacoffee #19grams"
@@ -150,7 +150,7 @@ fieldnote5 = FieldNote.create(
     user: supriya,
     category: manualbrew,  
     title: "aeropress",
-    memo: "First time I've used an aeropress and you can brew a nice syrupy consistency like espresso.",
+    memo: "First time I've used an aeropress to brew a nice syrupy espresso-like consistency.",
     image: "https://i.imgur.com/Ice7CD0.png",
     year: 2018,
     tags: "#aeropress"

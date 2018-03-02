@@ -8,11 +8,11 @@ class Api::CategoriesController < ApplicationController
         @category = Category.create!(category_params)
         render json: @category
       end
-    
+
       def show
         @category = Category.find(params[:id])
         render json: @category
-      end
+    end
     
       def update
         @category = Category.find(params[:id])
