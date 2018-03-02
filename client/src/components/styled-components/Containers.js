@@ -55,24 +55,6 @@ margin-top: 350px;
 `
 // Credit: SplashImg Photo by Nathan Dumlao on Unsplash
 
-
-export const ItemName = styled.p`
-font-weight: bold;
-`
-export const Description = styled.p`
-font-style: italic;
-`
-export const Price = styled.p`
-font-weight: bold;
-`
-
-export const OrderItemsContainer = styled.div`
-width: 80vw;
-margin-top: 75px;
-justify-content: center;
-align-items: center;
-`
-
 export const CategoriesListContainer = styled.div `
     display: flex;
     flex-wrap: wrap;
@@ -153,7 +135,8 @@ img {
 `
 
 export const FieldNotesContainer = styled.div`
-background-color: lightgoldenrodyellow;
+/* background-color: lightgoldenrodyellow; */
+background-color: #DDEDE8;
 display: flex;
 justify-content: flex-start;
 margin: 15px;
@@ -161,3 +144,21 @@ margin: 15px;
         flex-wrap: wrap;
     }
 `
+export const BelongsToUserContainer = styled.div`
+display: flex;
+flex-direction: column;
+border-right: whitesmoke solid 3px;
+margin: 5px;
+color: #774222;
+}
+`
+
+export const FieldNoteTextWrapper = styled.div`
+width: 80vw;
+`
+
+export const FieldNoteInfoContainer = styled.div`
+text-align: left;
+`
+
+// PencilIcon: edit by Ralf Schmitzer from the Noun Project

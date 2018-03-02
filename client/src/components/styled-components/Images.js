@@ -5,17 +5,21 @@ export const LogoImage = styled.img`
     width: 50px;
 `
 
-export const CartIconStyle = styled.img`
-width: 40px;
-`
-
 export const PersonIconStyle = styled.img`
 width: 30px;
 `
 
-export const MenuItem = styled.img`
-
+export const ProfilePicSmall = styled.img`
+width: 35px;
+/* border-radius: 99%; */
+border: solid whitesmoke 1px;
 `
+
+export const IconSmall = styled.img`
+width: 3vw;
+margin: 4px;
+`
+
 export const CategoryImage = styled.img`
     width: 300px;
     /* height: 286.86px; */
