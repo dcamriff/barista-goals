@@ -162,3 +162,4 @@ text-align: left;
 `
 
 // PencilIcon: edit by Ralf Schmitzer from the Noun Project
+// TrashIcon: Trash by Ralf Schmitzer from the Noun Project
