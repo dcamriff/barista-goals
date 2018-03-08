@@ -1,11 +1,14 @@
 {
-    "name": "barista-goals",
-    "engines": {
-      "node": "9.4.0"
-    },
-    "scripts": {
-      "build": "cd client && npm install && npm run build && cd ..",
-      "deploy": "cp -a client/build/. public/",
-      "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
-    }
+  "name": "barista-goals",
+  "engines": {
+    "node": "9.4.0"
+  },
+  "scripts": {
+    "build": "cd client && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+  },
+  "dependencies": {
+    "auth0-js": "^9.3.2"
   }
+}
