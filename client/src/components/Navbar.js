@@ -1,28 +1,32 @@
 import React from 'react'
 import TampLogo from './styled-components/img/tamp-white.svg'
 import PersonIcon from './styled-components/img/person2.png'
-// import { LogOutContainer } from './styled-components/Containers'
-// import { LogOutButton } from './styled-components/Form'
-import { NavContainer, LogoContainer, NavCenterTextContainer, LinksContainer } from './styled-components/NavStyle'
-import { Link } from 'react-router-dom'
+// import { LogOutContainer } from './styled-components/Containers' import {
+// LogOutButton } from './styled-components/Form'
+import {NavContainer, LogoContainer, NavCenterTextContainer, LinksContainer} from './styled-components/NavStyle'
+import {Link} from 'react-router-dom'
 
 const NavBar = (props) => {
     return (
         <NavContainer>
-                <LogoContainer>
-                    <Link to="/"><img src={TampLogo} alt="barista goals logo"/></Link>
-                    </LogoContainer>
-                <NavCenterTextContainer>
+            <LogoContainer>
+                <Link to="/"><img src={TampLogo} alt="barista goals logo"/></Link>
+            </LogoContainer>
+            <NavCenterTextContainer>
                 <Link to="/categories">
-                <div>Barista Goals</div>
+                    <div>Barista Goals</div>
                 </Link>
-                </NavCenterTextContainer>
-                <LinksContainer>
-                <Link to="/login"><img src={PersonIcon} alt="barista goals logo"/></Link>
-                {/* <span> / </span>
-                <Link to="/login">Log In</Link> */}
-                </LinksContainer>
-            </NavContainer>
+            </NavCenterTextContainer>
+
+            {localStorage.userId ? 
+            <LinksContainer>
+                <Link to="/">Log Out</Link>
+            </LinksContainer> :
+            <div>
+
+            <Link to = "/login" > <img src={PersonIcon} alt="barista goals logo"/></Link>
+            </div> } 
+        </NavContainer>
     )
 }
 

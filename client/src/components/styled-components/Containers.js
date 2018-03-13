@@ -180,6 +180,9 @@ flex-direction: column;
 border-right: whitesmoke solid 3px;
 margin: 5px;
 color: #774222;
+width: 150px;
+img {
+    border-radius: 3px;
 }
 `
 

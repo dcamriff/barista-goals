@@ -8,7 +8,8 @@ import Navbar from './components/Navbar'
 import HomePage from './components/HomePage'
 import LoginForm from './components/LoginForm'
 import CategoriesList from './components/CategoriesList'
-import CategoryShow from'./components/CategoryShow'
+import CategoryShow from './components/CategoryShow'
+import FieldNoteForm from './components/FieldNoteForm'
 
 
 class App extends Component {
@@ -20,32 +21,33 @@ class App extends Component {
   isLoggedIn = () => {
     if (this.state.isLoggedIn === false) {
       this.setState({isLoggedIn: true})
-    }else
-    {this.setState({isLoggedIn: false})
+    }else{
+      this.setState({isLoggedIn: false})
     }
   }
+  
+  fetchCategories = async () => {
+    try {
+      const res = await axios.get('/api/categories')
+      await this.setState({categories: res.data})
+      return res.data
+    }
+    catch (err) {
+      console.log(err)
+      await this.setState({error: err.message})
+      return err.message
+    }
+  }
+  
   componentWillMount(){
     this.fetchCategories()
   }
 
-  fetchCategories = async () => {
-    try {
-      const res = await axios.get('/api/categories')
-        await this.setState({categories: res.data})
-        return res.data
-      }
-      catch (err) {
-        console.log(err)
-        await this.setState({error: err.message})
-        return err.message
-      }
-  }
-  
-
   render() {
-    const HomeComponent = () => (<HomePage />)
+    const HomeComponent = () => (<HomePage isLoggedIn = {this.isLoggedIn} />)
     const CategoryListComponent = () => (<CategoriesList categories={this.state.categories} />)
     const CategoryShowComponent = (props) => (<CategoryShow category={this.state.category} {...props} isLoggedIn = {this.state.isLoggedIn} />)
+    const NewFieldNoteComponent = () => (<FieldNoteForm />)
     // const FieldNotesListComponent = () => (<FieldNotesList field_notes={this.state.field_notes} />)
 
     return (
