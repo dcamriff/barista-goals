@@ -23,6 +23,7 @@ supriya = User.create!(
     lastname: "Y",
     email: "supriya@testemail.com",
     password: "password",
+    picture: "https://i.imgur.com/buZomXp.jpg",
     company: "Revelator"
 )
 

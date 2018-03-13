@@ -63,7 +63,3 @@ class FieldNoteForm extends Component {
 
 export default FieldNoteForm
 
-// type="text"
-// name="picture"
-// placeholder="Add a picture!"
-// onChange={this.handleInputChange} />
