@@ -22,10 +22,11 @@ const NavBar = (props) => {
             <LinksContainer>
                 <Link to="/">Log Out</Link>
             </LinksContainer> :
-            <div>
-
+            
+            <LinksContainer>
             <Link to = "/login" > <img src={PersonIcon} alt="barista goals logo"/></Link>
-            </div> } 
+            </LinksContainer>
+             } 
         </NavContainer>
     )
 }

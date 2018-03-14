@@ -26,7 +26,7 @@ class FieldNoteForm extends Component {
         this.setState({newFieldNote, redirect: true})
     }
 
-    createPost(event){
+    createNote(event){
         this.props.showFieldNoteForm()
         event.preventDefault()
         axios.post(`/api/categories/${this.state.category_id}/field_notes`, this.state.newFieldNote)
@@ -44,7 +44,7 @@ class FieldNoteForm extends Component {
         return (
             <div>
                 <h2>add a field note</h2>
-                <form action="">
+                <form onSubmit={this.createNote.bind(this)}>
                     <div>
                     <AddNewFormInput type="text" name="title" placeholder="title" oncChange={this.handleChange}/>
                     <AddNewFormInput type="textarea" name="memo" placeholder="note" oncChange={this.handleChange}/>
