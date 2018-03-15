@@ -6,8 +6,8 @@ import { SplashContainer, HomePageText, LoginContainer, LoginFormInput, Button }
 class HomePage extends Component {
 
     state = {
-        username: "",
-        login: false,
+        // username: "",
+        // login: false,
     }
 
     isLoggedIn = () => {
