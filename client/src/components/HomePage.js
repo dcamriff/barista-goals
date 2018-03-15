@@ -39,10 +39,10 @@ class HomePage extends Component {
 
     render () {
 
-        if (this.state.login === true) {
-            this.props.isLoggedIn()
-            return (<Redirect to="/categories" />)
-        }
+        // if (this.state.login === true) {
+        //     this.props.isLoggedIn()
+        //     return (<Redirect to="/categories" />)
+        // }
 
         return (
             <div>

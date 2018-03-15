@@ -44,7 +44,8 @@ class App extends Component {
   }
 
   render() {
-    const HomeComponent = () => (<HomePage isLoggedIn = {this.isLoggedIn} />)
+    // const HomeComponent = () => (<HomePage isLoggedIn = {this.isLoggedIn} />)
+    const HomeComponent = () => (<HomePage />)
     const CategoryListComponent = () => (<CategoriesList categories={this.state.categories} />)
     const CategoryShowComponent = (props) => (<CategoryShow category={this.state.category} {...props} isLoggedIn = {this.state.isLoggedIn} />)
     const NewFieldNoteComponent = () => (<FieldNoteForm />)
